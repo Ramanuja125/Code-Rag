@@ -1,0 +1,13 @@
+faiss-cpu
+numpy
+transformers
+tokenizers
+torch
+scikit-learn
+pygithub
+astor
+sentence-transformers
+pymysql
+rocksdict
+whoosh
+rank_bm25
