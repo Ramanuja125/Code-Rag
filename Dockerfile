@@ -37,7 +37,7 @@ RUN apt update && apt install -y git-all \
 RUN rm -rf /cse511/*
 
 # Copy requirements.txt from the main branch repository
-RUN git clone --branch integration https://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@github.com/Fall-24-CSE511-Data-Processing-at-Scale/Project-6-Group-06.git /cse511
+RUN git clone --branch integration https://<need-to-add-personal-access-token>@github.com/Fall-24-CSE511-Data-Processing-at-Scale/Project-6-Group-06.git /cse511
 
 # Install Python libraries listed in the requirements.txt file
 RUN pip3 install --no-cache-dir -r /cse511/requirements.txt
