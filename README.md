@@ -1,4 +1,33 @@
-# Project-6-Group-06
+# Code - Rag
+## Overview
+ 
+Code RAG is a Retrieval-Augmented Generation (RAG) system specifically designed for coding tasks. It combines semantic code retrieval with a large language model to help developers efficiently access relevant code snippets, documentation, and context-aware code suggestions.
+ 
+Unlike general-purpose RAG systems — which handle broad natural language tasks like articles or Q&A — Code RAG focuses exclusively on code-related tasks such as code generation, documentation, completion, and refactoring.
+ 
+---
+
+## System Architecture
+ 
+The pipeline flows as follows:
+ 
+```
+GitHub Repository → Code Chunking → RocksDB (Indexing)
+
+                                          ↓
+User Prompt → Semantic Search (Faiss) → LLM (Qwen2.5-Coder) → Response
+```
+
+### Key Components
+ 
+| Component | Technology | Role |
+|---|---|---|
+| **Data Processing** | Custom Parser | Extracts code chunks, filters irrelevant data |
+| **Object Storage / Indexing** | RocksDB (LSM-tree) | Organizes and stores code chunks |
+| **Vector Storage** | Faiss | Stores and retrieves semantic embedding vectors |
+| **Language Model** | Qwen2.5-Coder-1.5B | Generates context-aware code suggestions and explanations |
+
+
 
 ## To run this program
 Clone the repo and inside the Dockerfile on line 40 - create a personal access token and add the value there -
