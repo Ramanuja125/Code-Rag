@@ -1,6 +1,11 @@
 # Project-6-Group-06
 
 ## To run this program
+Clone the repo and inside the Dockerfile on line 40 - create a personal access token and add the value there -
+it would look something like this 
+```
+https://ghp_fdifiweorqwproqiejqwujeqweiwqjeioqwj@github.com
+```
 First build a docker image with the command:\
 docker build -t group-project-image .\
 Then create a docker container with the command:\
